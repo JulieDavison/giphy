@@ -1,0 +1,29 @@
+#disney-button {
+    background-color: blueviolet;
+    font-size: 22px;
+    font-family: cursive;
+    color: blanchedalmond;
+    
+}
+#find-character {
+    background-color: lightseagreen;
+    font-size: 22px;
+    font-family: cursive;
+    color: blanchedalmond;
+    
+}
+
+h2 {
+    color: blue;
+    
+}
+h4 {
+    color: blue;
+}
+
+
+
+#images {
+    display:flex;
+    flex-wrap: wrap;
+}

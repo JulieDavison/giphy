@@ -10,40 +10,48 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="../giphy/disney.css">
+
 </head>
 
 <body>
 
   <div class="container">
 
-  <h2>Disney Gipgy-tastic Page</h2>
-  <h4>Choose a button or create a new one by entering a character's name.</h4>
+    <h2>Disney Giphy-tastic Page</h2>
+    <h4>Choose a button or create a new one by entering a character's name.</h4>
+
+    <!-- <div class="d-flex justify-content-center"> -->
+      <!-- Input character form  -->
+      <div>
+        <form id="character-form">
+           <!-- This button will trigger our AJAX call -->
+          <input id="find-character" type="submit" value="Disney Character Search">
+       
+          <label for="character-input">Type Character Here:</label>
+          <input type="text" id="character-input">
+        </form>
+          
+      </div>
+
+      <div id="newCharacterButton">
+    
+      </div>
+      <!-- We'll be dumping our JS contents in here -->
+      <div id="character-view"></div>
+    <!-- </div> -->
 
 
-  <!-- Input character form  -->
-  <div>
-    <form id="character-form">
-      <label for="character-input">Search for a disney character</label>
-      <input type="text" id="character-input"><br>
 
-      <!-- This button will trigger our AJAX call -->
-      <input id="find-character" type="submit" value="Disney Character Search">
-    </form>
+
+    <!-- <div class="d-flex justify-content-center"> -->
+    <!-- <div class="container"> -->
+    <!-- Magically Random Disney Button -->
+    <button id="disney-button">magically random disney button</button>
+    <div id="images"></div>
   </div>
+  <!-- </div> -->
 
-  <!-- We'll be dumping our JSON contents in here -->
-  <div id="character-view"></div>
-
-
-
-
-
-
-<!-- <div class="container"> -->
-  <!-- Magically Random Disney Button -->
-  <button id="disney-button">magically random disney button</button>
-  <div id="images"></div>
-  </div>
 
   <!-- jQuery scripts -->
 
