@@ -8,7 +8,7 @@ makeButton ();
 function makeButton() {
 
     // Deleting the movies prior to adding new movies
-    // (this is necessary otherwise we will have repeat buttons)
+    // (this is necessary otherwise we will have repcd eat buttons)
     $("#newCharacterButton").empty();
 
     // Looping through the array of movies
