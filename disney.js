@@ -1,17 +1,9 @@
 // Key
 var APIKey = "ajz5pnllJ9wR0I3K3m5mpK1chLSm4JJe";
 // Character Buttons
-var character = ["Minnie Mouse", "Mickey Mouse", "Goofy", "Bambi", "Happy", "Peter Pan", "Tigger", "Piglet", "Ariel", "Sebastian"];
+var character = ["Minnie Mouse", "Mickey Mouse", "Snow White", "Bambi", "Tinkerbell", "Peter Pan", "Tigger", "Piglet", "Ariel", "Sebastian"];
 
 makeButton ();
-
-// // Generic function for capturing the movie name from the data-attribute
-// function alertCharacter() {
-//     var characterName = $(this).attr("data-name");
-
-//     alert(characterName);
-// }
-// console.log(this);
 
 function makeButton() {
 
@@ -33,12 +25,7 @@ function makeButton() {
         a.text(character[i]);
         // Adding the button to the HTML
         $("#newCharacterButton").append(a);
-        // $("#newCharacterButton").append(a.text.character[i]);
-
-
-
-        // This function handles events where one button is clicked
-        // $(document).on("click", ".character", alertCharacterName);
+        
     }
 
     $(".character").on("click", function
@@ -61,7 +48,7 @@ function makeButton() {
                         var gifLink = response.data[i].images.fixed_height.url;
                         // // Creating and storing an image tag
                         var container = $('<div>');
-                        var pEl = $('<p>').text(rating);
+                        var pEl = $('<p>').text("rating: " + rating);
                         var disneyImage = $("<img>")
                                         .attr("src", stillLink)
                                         .attr("data-still", stillLink)
@@ -117,39 +104,7 @@ $("#find-character").on("click", function (event) {
 
 
 
-    // Magically Random Disney Button
-
-    // Event listener for our magic disney-button
-    $("#disney-button").on("click", function () {
-
-        // Storing our giphy API URL for a random cat image
-        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=" + APIKey + "&tag=disney&rating=G";
-
-        // Perfoming an AJAX GET request to our queryURL
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-
-            // After the data from the AJAX request comes back
-            .then(function (response) {
-
-                // Saving the image_original_url property
-                var imageUrl = response.data.image_original_url;
-
-                // Creating and storing an image tag
-                var disneyImage = $("<img>");
-
-                // Setting the disneyImage src attribute to imageUrl
-                disneyImage.attr("src", imageUrl);
-                disneyImage.attr("alt", "disney image");
-
-                // Prepending the disneyImage to the images div
-                $("#images").prepend(disneyImage);
-                console.log(disneyImage);
-
-            });
-    });
+    
 
 
 
